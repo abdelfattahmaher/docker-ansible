@@ -37,22 +37,37 @@
         > vim Dockerfile
 
 ## Build edited image.
+    
     # sudo docker build --tag 
     # <repository>: centos/apache
     # <tag>: v1.0
+    
+    ```
     > sudo docker build -t centos/apache:v1.0 .
     > sudo docker image ls -a
+    ```
+
     ![](screenshots/2020-04-14_14-15-39.png)
 
-## Strat a container with the edited centos-image.
+## Strat a container with the edited centos-image
+    
+    ```
     > sudo docker run --detach --name apache-server1 --publish 8080:80 centos/apache:v1.0
+    ```
+
     ![](screenshots/2020-04-14_14-21-06.png)
 
-## Validate if the container is running.
+## Validate if the container is running
+    
+    ```
     > sudo docker ps -a
+    ```
+
     ![](screenshots/2020-04-14_14-34-56.png)
 
+    ```
     > curl localhost:8080
+    ```
 
 ## Check container IP.
     > sudo docker inspect apache-server1 | grep IPAddress

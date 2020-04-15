@@ -1,0 +1,11 @@
+# Upload container to repository
+    ## Sign up / login for docker hub.
+    ## Create repository.
+    ## Docker hub login from terminal.
+        > sudo docker login
+    ## List images.
+        > sudo docker image ls -a
+    ## Tag newly created image.
+        > sudo docker tag 819815b5b3ee abdelfatahmaher/
+    ## Upload image to repository.
+        > sudo docker push 
